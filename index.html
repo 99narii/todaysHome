@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오늘의집</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
     <header class="header">
         <!-- 네비게이션 상단 ------------------------------------------------------->
         <div class="header-upper">
           <div class="inner">
-            <i class="fas fa-bars searchMenu"></i>
             <div class="header-upper__inner">
               <div class="header-upper__logo"><a href="">오늘의집</a></div>
               <div class="header-upper__nav">
@@ -21,48 +28,45 @@
                   </li>
                   <li class="header-upper__item"><a href="">스토어</a></li>
                   <li class="header-upper__item">
-                    <a href="">인테리어시공</a>
+                    <a href="">인테리어/생활</a>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="header-upper__service">
-              <i class="mobile-searchBar fas fa-search"></i>
-              <div class="header-upper__searchBar">
+              <div class="header-upper__searchBax">
+                <span class="search-icon">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="오늘의집 통합검색" />
+                <input type="text" class="search-input" placeholder="통합검색" />
+              </span>
               </div>
               <a href=""><i class="fas fa-shopping-cart"></i></a>
               <ul>
                 <li><a href="">로그인</a></li>
                 <li><a href="">회원가입</a></li>
                 <li><a href="">고객센터</a></li>
-                <button class="header-upper__writeBt">
+                <button class="header-upper__writeBtn">
                   글쓰기
                   <div class="header-upper__lists">
                     <a href="">
-                      <h4>사진 올리기</h4>
+                      <p>사진/동영상 올리기</p>
                       <p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
                     </a>
                     <a href="">
-                      <h4>집들이 글쓰기</h4>
+                      <p>집들이 글쓰기</p>
                       <p>집에 관한 이야기를 글로 작성해 보세요.</p>
                     </a>
                     <a href="">
-                      <h4>노하우 글쓰기</h4>
+                      <p>노하우 글쓰기</p>
                       <p>다양한 인테리어 노하우를 공유해 주세요.</p>
                     </a>
                     <a href="">
-                      <h4>상품 리뷰 글쓰기</h4>
+                      <p>상품 리뷰 쓰기</p>
                       <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
                     </a>
                     <a href="">
-                      <h4>시공 전문가 리뷰쓰기</h4>
+                      <p>시공 전문가 리뷰쓰기</p>
                       <p>시공 전문가 리뷰를 작성하고 포인트도 받아보세요.</p>
-                    </a>
-                    <a href="">
-                      <h4>인테리어 질문하기</h4>
-                      <p>인테리어 고수들과 전문가들에게 질문해 보세요.</p>
                     </a>
                   </div>
                 </button>
@@ -73,30 +77,479 @@
 
         <!-- 네비게이션 하단----------------------------------------------------------- -->
         <div class="header-lower">
+          <div class="header-lower-container">
           <div class="inner">
             <nav>
-              <a class="header-lower__item active" href="">홈</a>
-              <a class="header-lower__item" href="">추천</a>
-              <a class="header-lower__item" href="">#채널</a>
-              <a class="header-lower__item" href="">집들이</a>
-              <a class="header-lower__item" href="">집사진</a>
-              <a class="header-lower__item" href="">3D인테리어</a>
-              <a class="header-lower__item" href="">살림수납</a>
-              <a class="header-lower__item" href="">콜렉터블</a>
-              <a class="header-lower__item" href="">홈스토랑</a>
-              <a class="header-lower__item" href="">핫플레이스</a>
-              <a class="header-lower__item" href="">육아</a>
-              <a class="header-lower__item" href="">플랜테리어</a>
-              <a class="header-lower__item" href="">반려동물</a>
-              <a class="header-lower__item" href="">캠핑</a>
-              <a class="header-lower__item" href="">취미</a>
-              <a class="header-lower__item" href="">이벤트</a>
+              <span class="header-lower__item active" href="">홈</span>
+              <span class="header-lower__item" href="">추천</span>
+              <span class="header-lower__item" href="">#채널</span>
+              <span class="header-lower__item" href="">집들이</span>
+              <span class="header-lower__item" href="">집사진</span>
+              <span class="header-lower__item" href="">살림수납</span>
+              <span class="header-lower__item" href="">콜렉터블</span>
+              <span class="header-lower__item" href="">홈스토랑</span>
+              <span class="header-lower__item" href="">핫플레이스</span>
+              <span class="header-lower__item" href="">육아</span>
+              <span class="header-lower__item" href="">플랜테리어</span>
+              <span class="header-lower__item" href="">반려동물</span>
+              <span class="header-lower__item" href="">캠핑</span>
+              <span class="header-lower__item" href="">취미</span>
+              <span class="header-lower__item" href="">이벤트</span>
             </nav>
-            <span >인테리어</span>
+              
           </div>
+          <div class="popular">
+          <span class="header-gradient"></span>
+          <button>▼</button>
+          <div class="popular-keyword">인테리어</div>
         </div>
+        </div>
+      </div>
       </header>
 
+      <!--페이지 전체 영역---------------------------------------------------------->
+      <div class="home-page">
+        <div class="container">
+          <div class="home-header">
+            <!--메인 배너-->
+            <div class="main-banner-l">
+              <div class="main-banner-text">
+                <p class="banner-title">눈이 편한 원목 가구들! 패턴&컬러 믹스매치</p>
+                <span class="banner-profile-info">
+                  <div class="profile-pic"></div>
+                  <p>생각중입니다</p>
+                </span>
+              </div>
+            </div>
+            <div class="main-banner-r">
+              <div class="banner-slider">
+                <div class="banner-img" style="background-color: #189ec7;">1</div>
+                <div class="banner-img" style="background-color: #18c79b;">2</div>
+                <div class="banner-img" style="background-color: #b318c7;">3</div>
+              </div>
+              <div class="slider-index">1 / 3</div>
+            </div>
+          </div>
+          <div class="container-category">
+            <ul class="home-shortcut__container">
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/170867534619398899.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>봄맞이세일</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/167198007152582471.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>오늘의딜</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/169880736853477508.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>수납꿀팁</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/170184318298899959.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>행운출첵</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/167198010271968429.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>집들이</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/170736215082472666.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>챌린지참여</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/170358029767805279.png?w=256"                  />
+                  <p>장보기</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/167198012024333402.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>빠른배송</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/167198022841390557.png?w=256"                    alt="쇼핑하기 바로가기 이미지"
+                  />
+                  <p>리모델링</p>
+              </li>
+              <li class="home-shortcut__item">
+                  <img
+                  src="https://image.ohou.se/i/bucketplace-v2-development/uploads/shortcut/home_feed_shortcut_sets/167198021046015480.png?w=256"                  />
+                  <p>쉬운이사</p>
+              </li>
+            </ul>  
+        </div>
+        <!--컨텐츠 영역---------------------------------------->
+        <div class="container-contents">
+          <div class="contents-header">
+            <h3>이런 사진 찾고 있나요?</h3>
+            <p>좋아하실 만한 인테리어 콘텐츠를 추천해드려요</p>
+          </div>
+          <div class="contents-list">
+            <ul>
+              <li class="contents-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/170889706359449286.jpeg?w=256&h=341.3333333333333&c=c" />
+              </li>
+              <li class="contents-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/170890179571456069.jpeg?w=256&h=341.3333333333333&c=c" />
+              </li>
+
+              <li class="contents-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/170889706359449286.jpeg?w=256&h=341.3333333333333&c=c" />
+              </li>
+              <li class="contents-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/170889706359449286.jpeg?w=256&h=341.3333333333333&c=c" />
+              </li>
+
+              <li class="contents-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/170889706359449286.jpeg?w=256&h=341.3333333333333&c=c" />
+              </li>
+              <li class="contents-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/170889706359449286.jpeg?w=256&h=341.3333333333333&c=c" />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--new intarial----------------->
+        <div class="container-intariar">
+          <div class="intariar-header">
+            <h3>똑같은 집 지겨웠다면?</h3>
+          </div>
+          <div class="intariar-list">
+            <ul>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/projects/167270935769348291.jpg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <span><span class="title-color">40평대 모던 아파트</span>
+                  아이의 특별한 유년기 추억이 되길</span>
+                </span>
+                </span>
+              </li>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/project/170677629023928072.jpg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">             
+                  <span><span class="title-color">평수보다 좁아 보였던 구축</span>
+                  구조 변경으로 확 바꿨어요!</span>
+                </span>
+                </span>
+              </li>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/projects/167151474871524331.JPG?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <span><span class="title-color">마당을 담은 단독 주택</span>
+                  취향이 맞는 공간에서 사는 기쁨!</span>
+                </span>
+              </li>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/project/170615632988442297.jpeg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <span><span class="title-color">가구 회사 다니는 엄마</span>
+                  다양한 거실 활용법까지!</span>
+                </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container-intariar">
+          <div class="intariar-header">
+            <h3>40평이상 어떻게 채울지 고민됐죠?</h3>
+          </div>
+          <div class="intariar-list">
+            <ul>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/169432088268148760.jpeg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <span><span class="title-color">우리 집이었으면</span>
+                  호불호 없는 인테리어 장인 top 7</span>
+                </span>
+                </span>
+              </li>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/advices/167534813364636871.jpg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <span><span class="title-color">요리가 돋보이는</span>
+                  추천 감성 플레이트 브랜드 5</span>
+                </span>
+                </span>
+              </li>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/advices/168190412730093384.jpg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <span><span class="title-color">인테리어 치트키</span>
+                  초보자도 기르기 쉬운 감성 식물 5종</span>
+                </span>
+                </span>
+              </li>
+              <li class="intariar-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/advice/169550985189470708.jpg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <span><span class="title-color">버터 색감 가득</span>
+                  노랑 덕후가 애정하는 데스크템 12가지</span>
+                </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!--카테고리별 상품찾기----------------------------------------->
+        <div class="container-product-category">
+          <h3>카테고리별 상품 찾기</h3>
+          <div class="category-list">
+            <ul>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/170645215641495789.png?w=72"/>
+                <p>새학기 준비</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/170887228840323630.png?w=72"/>
+                <p>봄맞이</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165698403420736265.png?w=72"/>
+                <p>가구</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/169336026919989706.png?w=72"/>
+                <p>패브릭</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/169258215285574092.png?w=72"/>
+                <p>가전·디지털</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165443714334272236.png?w=72"/>
+                <p>주방용품</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/166727583625644946.png?w=72"/>
+                <p>식품</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/167167019685810067.png?w=72"/>
+                <p>데코·식물</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165443713935676588.png?w=72"/>
+                <p>조명</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165443714917341657.png?w=72"/>
+                <p>수납·정리</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165519431107541334.png?w=72"/>
+                <p>생활용품</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165579048228622395.png?w=72"/>
+                <p>생필품</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/166598560990637620.png?w=72"/>
+                <p>유아·아동</p>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/170529503435877992.png?w=72"/>
+                <p>반려동물</p>
+              </li>
+              <span class="gradient-sec"></span>
+            </ul>
+          </div>
+        </div>
+<!--오늘의 딜-->
+        <div class="container-deal">
+          <h3>오늘의 딜</h3>
+          <div class="deal-list">
+            <ul>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/deals/168048448494757034.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"/>
+                <div>
+                  <p>헤트라스</p>
+                  <p>[단하루 16,800원~] 1+1 대용량 500ml 디퓨저 차량용 방향제 룸스프레이</p>
+                  <span><span>46%</span>18,800 외</span>
+                  <span><span>★</span> 리뷰 11,172</span>
+                  <div>특가</div>
+                </div>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/deals/168048448494757034.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"/>
+                <div>
+                  <p>헤트라스</p>
+                  <p>[단하루 16,800원~] 1+1 대용량 500ml 디퓨저 차량용 방향제 룸스프레이</p>
+                  <span><span>46%</span>18,800 외</span>
+                  <span><span>★</span> 리뷰 11,172</span>
+                  <div>특가</div>
+                </div>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/deals/168048448494757034.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"/>
+                <div>
+                  <p>헤트라스</p>
+                  <p>[단하루 16,800원~] 1+1 대용량 500ml 디퓨저 차량용 방향제 룸스프레이</p>
+                  <span><span>46%</span>18,800 외</span>
+                  <span><span>★</span> 리뷰 11,172</span>
+                  <div>특가</div>
+                </div>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/deals/168048448494757034.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"/>
+                <div>
+                  <p>헤트라스</p>
+                  <p>[단하루 16,800원~] 1+1 대용량 500ml 디퓨저 차량용 방향제 룸스프레이</p>
+                  <span><span>46%</span>18,800 외</span>
+                  <span><span>★</span> 리뷰 11,172</span>
+                  <div>특가</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!--인테리어 리뷰-->
+        <div class="container-intariar-review">
+            <h3>유저들의 인테리어 시공 리뷰</h3>
+          <div class="review-list">
+            <ul>
+              <li class="review-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/169432088268148760.jpeg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <strong>예나디자인</strong>
+                  <p>결혼하고 첫 집에서 다음집으로 이사를 계획하면서 매매를 하게되었고
+                    평소 SNS에서만 보던 내가 구상한 나의집을 상상하면서 구축매매+올인테리어를
+                    하기로 결정하고 안산
+                  </p>
+                  </span>
+              </li>
+              <li class="review-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/169432088268148760.jpeg?w=360&h=240&c=c"/>
+                <span class="intariar-card-title">
+                  <strong>예나디자인</strong>
+                  <p>결혼하고 첫 집에서 다음집으로 이사를 계획하면서 매매를 하게되었고
+                    평소 SNS에서만 보던 내가 구상한 나의집을 상상하면서 구축매매+올인테리어를
+                    하기로 결정하고 안산
+                  </p>
+                  </span>
+              </li>
+              <li class="review-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/169432088268148760.jpeg?w=360&h=240&c=c"/>
+                <span class="review-card-title">
+                  <strong>예나디자인</strong>
+                  <p>결혼하고 첫 집에서 다음집으로 이사를 계획하면서 매매를 하게되었고
+                    평소 SNS에서만 보던 내가 구상한 나의집을 상상하면서 구축매매+올인테리어를
+                    하기로 결정하고 안산
+                  </p>
+                  </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!--기획전-->
+        <div class="container-market">
+          <div class="market-header">
+            <h3>40평이상 어떻게 채울지 고민됐죠?</h3>
+          </div>
+          <div class="market-list">
+            <ul>
+              <li class="market-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/advice/169550985189470708.jpg?w=360&h=240&c=c"/>
+                <span class="market-card-title">
+                  <p class="title-color">버터 색감 가득</p>
+                  <p>노랑 덕후가 애정하는 데스크템 12가지</p>
+                </span>
+              </li>
+              <li class="market-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/advice/169550985189470708.jpg?w=360&h=240&c=c"/>
+                <span class="market-card-title">
+                  <p class="title-color">버터 색감 가득</p>
+                  <p>노랑 덕후가 애정하는 데스크템 12가지</p>
+                </span>
+              </li>
+              <li class="market-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/advice/169550985189470708.jpg?w=360&h=240&c=c"/>
+                <span class="market-card-title">
+                  <p class="title-color">버터 색감 가득</p>
+                  <p>노랑 덕후가 애정하는 데스크템 12가지</p>
+                </span>
+              </li>
+              <li class="market-card">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/advice/169550985189470708.jpg?w=360&h=240&c=c"/>
+                <span class="market-card-title">
+                  <p class="title-color">버터 색감 가득</p>
+                  <p>노랑 덕후가 애정하는 데스크템 12가지</p>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!--베스트-->
+        <div class="container-best">
+          <div class="container-heder">
+            <h3>베스트</h3><p>더보기</p>
+          </div>
+          <div class="chips">
+            <span>전체</span><span>봄맞이</span><span>새학기 준비</span>
+            <span>가구</span><span>패브릭</span><span>가전 디지털</span>
+            <span>주방용품</span><span>식품</span><span>데코 식물</span>
+            <span>조명</span><span>수납정리</span><span>생활용품</span>
+            <span>생필품</span><span>유아 아동</span><span>반려동물</span>
+            <span>캠핑 레저</span>
+          </div>
+          <div class="best-list">
+            <ul>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/deals/168048448494757034.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"/>
+                <div class="product-info">
+                  <p class="title">헤트라스</p>
+                  <p>[단하루 16,800원~] 1+1 대용량 500ml 디퓨저 차량용 방향제 룸스프레이</p>
+                  <strong><span class="title-color">57% </span>299,900</strong>
+                  <div class="review-sec"><span class="star">★</span><strong>4.8</strong> <span class="review-count">리뷰 11,172</span></div>
+                  <div class="badge-red">특가</div>
+                </div>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/169821856938204382.jpg?gif=1&w=480&h=480&c=c&q=0.8&webp=1"/>
+                <div class="product-info">
+                  <p class="title">헤트라스</p>
+                  <p>[단하루 16,800원~] 1+1 대용량 500ml 디퓨저 차량용 방향제 룸스프레이</p>
+                  <strong><span class="title-color">57% </span>299,900</strong>
+                  <div class="review-sec"><span class="star">★</span><strong>4.8</strong> <span class="review-count">리뷰 11,172</span></div>
+                  <div class="badge-red">특가</div>
+                </div>
+              </li>
+              <li>
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/1554432441250_K6wX5dopzz.jpg?gif=1&w=480&h=480&c=c&q=0.8&webp=1"/>
+                <div class="product-info">
+                  <p class="title">퀵슬립</p>
+                  <p>Q4 유로탑 롤팩 매트리스 2size</p>
+                  <strong><span class="title-color">57% </span>299,900</strong>
+                  <div class="review-sec"><span class="star">★</span><strong>4.8</strong> <span class="review-count">리뷰 11,172</span></div>
+                  <div class="badge-red">특가</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer>
+          <div>
+            
+          </div>
+        </footer>
+      </div>
       <script src="main.js" ></script>
 </body>
 </html>
