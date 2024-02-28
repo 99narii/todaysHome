@@ -16,18 +16,19 @@
 </head>
 <body>
     <header class="header">
-      
-
         <!-- 네비게이션 상단 ------------------------------------------------------->
         <div class="header-upper">
           <div class="inner">
             <div class="header-mobile">
-              <button id="modal-open" >=</button>
-              <div class="header-upper_logo"><a href="">오늘의집</a></div>
+              <i class="fas fa-bars"></i>
+              <div class="header-logo"><a href="">오늘의집</a></div>
+              <div>
+              <i class="fas fa-shopping-cart"></i>
               <i class="fas fa-search"></i>
             </div>
+            </div>
             <div class="header-upper_inner">
-              <div class="header-upper_logo"><a href="">오늘의집</a></div>
+              <div class="header-logo"><a href="">오늘의집</a></div>
               <div class="header-upper_nav">
                 <a href="">커뮤니티</a>
                 <a href="">스토어</a>
@@ -44,108 +45,35 @@
               <a href="#"><i class="fas fa-shopping-cart"></i></a>
                 <a href="">로그인</a>
                 <a href="">회원가입</a>
-                <a href="">고객센터</a>
+                <a class="sc-senter" href="">고객센터</a>
               </ul>
               <button class="header-upper_writeBtn">
                 글쓰기
-                <div class="header-upper_lists">
-                  <a href="">
-                    <p>사진/동영상 올리기</p>
-                    <p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
-                  </a>
-                  <a href="">
-                    <p>집들이 글쓰기</p>
-                    <p>집에 관한 이야기를 글로 작성해 보세요.</p>
-                  </a>
-                  <a href="">
-                    <p>노하우 글쓰기</p>
-                    <p>다양한 인테리어 노하우를 공유해 주세요.</p>
-                  </a>
-                  <a href="">
-                    <p>상품 리뷰 쓰기</p>
-                    <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
-                  </a>
-                  <a href="">
-                    <p>시공 전문가 리뷰쓰기</p>
-                    <p>시공 전문가 리뷰를 작성하고 포인트도 받아보세요.</p>
-                  </a>
-                </div>
               </button>
 
             </div>
           </div>
         </div>
-        <!--모바일-->
-        <div id="menus" class="modal__content-wrap">
-          <div class="modal__content-container">
-            <button class="close">X</button>
-            <div class="modal-layout modal__content-tit">
-              <div class="header-upper__logo modal-logo">
-                <a href="">오늘의집</a>
-              </div>
-              <div><a href="">앱다운로드</a></div>
-            </div>
-            <div class="modal-layout modal__content-login">
-              <a href="">
-                <button>로그인</button>
-              </a>
-              <a href="">
-                <button>회원가입</button>
-              </a>
-            </div>
-            <ul class="modal-layout modal__content community">
-              <h4>커뮤니티</h4>
-              <i class="fa-solid fa-angle-down"></i>
-            </ul>
-            <ul class="modal-layout modal__content store">
-              <h4>스토어</h4>
-              <i class="fa-solid fa-angle-down"></i>
-            </ul>
-            <ul class="modal-layout modal__content interior">
-              <h4>인테리어시공</h4>
-              <i class="fa-solid fa-angle-down"></i>
-            </ul>
-            <ul class="modal-layout modal__content">
-              <li><a href="">마이페이지</a></li>
-              <li><a href="">나의 쇼핑</a></li>
-              <li><a href="">스크랩북</a></li>
-              <li><a href="">알림</a></li>
-              <li><a href="">이벤트</a></li>
-              <li><a href="">사진 올리기</a></li>
-              <li><a href="">집들이 글쓰기</a></li>
-              <li><a href="">노하우 글쓰기</a></li>
-              <li><a href="">상품 리뷰 쓰기</a></li>
-              <li><a href="">시공 전문가 리뷰 쓰기</a></li>
-              <li><a href="">인테리어 질문하기</a></li>
-              <li><a href="">고객센터</a></li>
-            </ul>
-            <ul class="modal-layout modal__content">
-              <li href=""><a href="">전문가 신청</a></li>
-              <li href=""><a href="">판매자 신청</a></li>
-            </ul>
-          </div>
-        </div>
-
         <!-- 네비게이션 하단--------------------------------------------------------->
         <div class="header-lower">
           <div class="header-lower-container">
           <div class="inner">
             <nav>
-              <a class="header-lower__item active" href="#">홈</a>
-              <a class="header-lower__item" href="#">추천</a>
-              <a class="header-lower__item" href="#">#채널</a>
-              <a class="header-lower__item" href="#">집들이</a>
-              <a class="header-lower__item" href="#">집사진</a>
-              <a class="header-lower__item" href="#">살림수납</a>
-              <a class="header-lower__item" href="#">콜렉터블</a>
-              <a class="header-lower__item" href="#">홈스토랑</a>
-              <a class="header-lower__item" href="#">핫플레이스</a>
-              <a class="header-lower__item" href="#">육아</a>
-              <a class="header-lower__item" href="#">플랜테리어</a>
-              <a class="header-lower__item" href="#">반려동물</a>
-              <a class="header-lower__item" href="#">캠핑</a>
-              <a class="header-lower__item" href="#">취미</a>
-              <a class="header-lower__item" href="#">이벤트</a>
+              <a class="lower-list" href="#">홈</a>
+              <a class="lower-list" href="#">추천</a>
+              <a class="lower-list" href="#">#채널</a>
+              <a class="lower-list" href="#">집들이</a>
+              <a class="lower-list" href="#">집사진</a>
+              <a class="lower-list" href="#">살림수납</a>
+              <a class="lower-list" href="#">콜렉터블</a>
+              <a class="lower-list" href="#">홈스토랑</a>
+              <a class="lower-list" href="#">핫플레이스</a>
+              <a class="lower-list" href="#">육아</a>
+              <a class="lower-list" href="#">플랜테리어</a>
+              <a class="lower-list" href="#">반려동물</a>
+              <a class="lower-list" href="#">캠핑</a>
+              <a class="lower-list" href="#">취미</a>
+              <a class="lower-list" href="#">이벤트</a>
             </nav>
           </div>
           <div class="popular">
@@ -601,14 +529,23 @@
             <h3>베스트</h3><p>더보기</p>
           </div>
           <div class="chips">
-            <span>전체</span><span>봄맞이</span><span>새학기 준비</span>
-            <span>가구</span><span>패브릭</span><span>가전 디지털</span>
-            <span>주방용품</span><span>식품</span><span>데코 식물</span>
-            <span>조명</span><span>수납정리</span><span>생활용품</span>
-            <span>생필품</span><span>유아 아동</span><span>반려동물</span>
-            <span>캠핑 레저</span>
-          </div>
-          <div class="best-list">
+            <a href="#">전체</a>
+            <a href="#">봄맞이</a>
+            <a href="#">새학기 준비</a>
+            <a href="#">가구</a>
+            <a href="#">패브릭</a>
+            <a href="#">가전 디지털</a>
+            <a href="#">주방용품</a>
+            <a href="#">식품</a>
+            <a href="#">데코 식물</a>
+            <a href="#">조명</a>
+            <a href="#">수납정리</a>
+            <a href="#">생활용품</a>
+            <a href="#">생필품</a>
+            <a href="#">유아 아동</a>
+            <a href="#">반려동물</a>
+            <a href="#">캠핑 레저</a>
+          </div>          <div class="best-list">
             <ul>
               <li>
                 <div class="img-container">
