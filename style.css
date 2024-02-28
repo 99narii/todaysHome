@@ -32,21 +32,19 @@
   
   .header-upper .inner {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     height: 60px;
   }
     
-  .header-upper__nav ul {
+  .header-upper_nav ul {
     display: none;
   }
   
-  .header-upper__logo {
+  .header-upper_logo {
     font-weight: 700;
     font-size: 1.5rem;
     cursor: pointer;
-    order: 1;
   }
     
   .fa-shopping-cart {
@@ -54,7 +52,7 @@
   }
 
   /*헤더 검색창*/
-  .header-upper__searchBax {
+  .header-upper_searchBax {
     border: 1px solid #DADDE0;
     border-radius: 3px;
     color: #DADDE0;
@@ -74,7 +72,7 @@
     font-size: 25px;
   }
   
-  .header-upper__searchBax .search-input {
+  .header-upper_searchBax .search-input {
     border: none;
     width: 100%;
     padding-left: 10px;
@@ -90,29 +88,29 @@
     margin: 9px 1px;
   }
 
-  .header-upper__inner {
+  .header-upper_inner {
     display: flex;
     align-items: center;
   }
 
-  .header-upper__logo {
+  .header-upper_logo {
     margin-right: 2rem;
     order: 0;
     font-size: 1.6rem;
   }
 
-  .header-upper__service {
+  .header-upper_service {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     color: #757575;
   }
 
-  .header-upper__service ul li {
+  .header-upper_service ul li {
     cursor: pointer;
   }
 
-  .header-upper__writeBtn {
+  .header-upper_writeBtn {
     width: 92px;
     height: 22px;
     color: #fff;
@@ -126,18 +124,18 @@
     font-size: 14px;
   }
 
-  .header-upper__writeBtn:hover {
+  .header-upper_writeBtn:hover {
     background: #189ec7;
   }
 
-  .header-upper__writeBtn::after {
+  .header-upper_writeBtn::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f078";
     margin-left: 0.5rem;
   }
 /*글쓰기 버튼 리스트 영역------------------------------------------*/
-  .header-upper__lists {
+  .header-upper_lists {
     position: absolute;
     z-index: 999;
     top: 3.6rem;
@@ -151,11 +149,11 @@
     transition: 1s;
   }
 
-  .header-upper__lists.openWirteMenu {
+  .header-upper_lists.openWirteMenu {
     display: block;
   }
 
-  .header-upper__lists::before {
+  .header-upper_lists::before {
     content: "";
     display: inline-block;
     width: 10px;
@@ -170,16 +168,16 @@
     transform: rotate(45deg);
   }
 
-  .header-upper__lists a p {
+  .header-upper_lists a p {
     font-size: 0.8rem;
     color: #424242;
   }
 
-  .header-upper__nav ul {
+  .header-upper_nav ul {
     display: flex;
     font-weight: 600;
   }
-  .header-upper__nav ul li {
+  .header-upper_nav ul li {
     font-size: 15px;
     color: #424242;
 
@@ -198,17 +196,17 @@
     color: #35c5f0;
   }
 /*헤더 상단 검색~글쓰기*/
-  .header-upper__service ul {
+  .header-upper_service ul {
     display: inline-block;
   }
 
-  .header-upper__service ul li a {
+  .header-upper_service ul li a {
     padding: 0 10px;
     display: inline-block;
     font-size: 14px;
   }
 
-  .header-upper__service ul li:nth-child(2) {
+  .header-upper_service ul li:nth-child(2) {
     border-right: 1px solid #EAEDEF;
     border-left: 1px solid #EAEDEF;
   }
@@ -269,7 +267,7 @@
     align-items: center;
   }
   .header-gradient {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff); /* Updated */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
     height: 100%;
     width: 70px;
   }
@@ -291,7 +289,7 @@
     border-bottom: 2px solid #35c5f0;
   }
 
-  /*메인 바디 공통-------------------------------------------------------*/
+  /*메인 바디----------------------------------------------------------*/
   .home-page {
     margin: 0;
   }
@@ -303,7 +301,7 @@
     padding: 0;
   }
 
-  /*메인 헤더-------------*/
+  /*메인 헤더------------------------------------------------------------*/
   .home-header {
     margin-top: 30px;
     display: flex;
@@ -337,7 +335,7 @@
     }
   }
   
-  .main-banner-text {
+  .main-banner_text {
     display: flex;
     flex-direction: column;
     height: 160px;
@@ -409,7 +407,7 @@
     font-weight: 700;
   }
   
-  /*카테고리------------------------------------------*/
+  /*카테고리------------------------------------------------------------*/
   .container-category{
     box-sizing: border-box;
     display: flex;
@@ -440,7 +438,7 @@
   }
   
 
-  /*콘텐츠 추천-----------------*/
+  /*콘텐츠 추천------------------------------------------------------------*/
   .container-contents {
 
     .contents-header {
@@ -475,12 +473,12 @@
       }
   }
 
-  /*인테리어 추천---------------*/
-  .container-intariar {
+  /*인테리어 추천------------------------------------------------------------*/
+  .container-interior {
     margin: 40px auto;
     max-width: 1136px;
 
-      .intariar-header {
+      .interior-header {
         padding: 20px 0;
 
           h3 {
@@ -488,7 +486,7 @@
             font-weight: 700;
           }
       }
-      .intariar-list {
+      .interior-list {
 
         ul {
           list-style: none;
@@ -498,20 +496,31 @@
   
         }  
 
-        .intariar-card {
+        .interior-card {
           display: flex;
           position: relative;
           flex-flow: column;
           width: 269px;
 
-            img {
-              border-radius: 4px;
-            }
+          .img-container {
+            width: 269px;
+            height: 179.33px;
+            border-radius: 4px;
+            overflow: hidden;
 
+            img {
+              width: 269px;
+              transition: transform 0.5s ease;
+            }
+          
+            img:hover {
+              transform: scale(1.05);
+            }
+          }
         }
       }
   }
-  .intariar-card-title {
+  .interior-card-title {
     margin-top: 10px;
     font-size: 16px;
     
@@ -521,7 +530,7 @@
     }
   }
 
-/*카테고리별 상품 찾기-----------------*/
+/*카테고리별 상품 찾기------------------------------------------------------------*/
 .container-product-category {
   width: 1136px;
 
@@ -601,14 +610,36 @@
           flex-flow: column;
           width: 269px;
 
+          .img-container {
+            width: 269px;
+            height: 269px;
+            overflow: hidden;
+            border-radius: 4px;
+  
+          }
+          img {
+            width: 269px;
+            height: 269px;
+            transition: transform 0.5s ease; 
+          }
+          img:hover {
+            transform: scale(1.05);
+          }
             img {
               border-radius: 4px;
             }
-
+            p{
+              font-size: 13px;
+            }
+            .title {
+              font-size: 11px;
+              color: #464646;
+            }
+  
         }
       }
   
-  .intariar-card-title {
+  .interior-card-title {
     margin-top: 10px;
     font-size: 16px;
     
@@ -621,7 +652,7 @@
 
 /*인테리어 리뷰*/
 
-.container-intariar-review {
+.container-interior-review {
   margin: 40px auto;
   max-width: 1136px;
 
@@ -649,9 +680,19 @@
         flex-flow: column;
         width: 365px;
 
-          img {
-            border-radius: 4px;
-          }
+        .img-container {
+          width: 360px;
+          height: 240px;
+          overflow: hidden;
+          border-radius: 4px;
+
+        }
+        img {
+          transition: transform 0.5s ease; 
+        }
+        img:hover {
+          transform: scale(1.05);
+        }
 
       }
     }
@@ -691,21 +732,32 @@
         position: relative;
         flex-flow: column;
         width: 269px;
+        overflow: hidden;
 
-          img {
-            border-radius: 4px;
-          }
+        .img-container {
+          width: 269px;
+          height: 179.33px;
+          overflow: hidden;
+          border-radius: 4px;
+
+        }
+        img {
+          transition: transform 0.5s ease; 
+        }
+        img:hover {
+          transform: scale(1.05);
+        }
 
       }
     }
 }
-.intariar-card-title {
+.interior-card-title {
   margin-top: 10px;
   font-size: 16px;
   
   .title-color{
-    color: #707070;
-    font-weight: 400;
+    color: #189ec7;
+    font-weight: 700;
   }
 }
 .container-heder {
@@ -766,9 +818,20 @@
         flex-flow: column;
         width: 365px;
 
-          img {
-            border-radius: 4px;
-          }
+        .img-container {
+          width: 365px;
+          height: 365px;
+          border-radius: 4px;
+          overflow: hidden;
+        
+        img {
+          transition: transform 0.5s ease; 
+          width: 365px;
+          height: 365px;
+        }
+        img:hover {
+          transform: scale(1.05);
+        }
           p {
             font-size: 13px;
           }
@@ -776,6 +839,7 @@
             font-size: 11px;
             color: #464646;
           }
+        }
       }
     }
 
@@ -799,17 +863,33 @@
   color: #35c5f0;
   font-weight: 700;
 }
-
-.badge-red {
-  border-radius: 5px;
-  width: 30px;
-  height: 20px;
-  background-color: #ee4a52 ;
-  font-size: 11px;
+.badges {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  gap: 5px;
+
+  .badge-red {
+    border-radius: 5px;
+    width: 30px;
+    height: 20px;
+    background-color: #ee4a52 ;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .badge-grey {
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    background-color: #f1f1f1 ;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #616161;
+  }
+  
 }
 .star {
   color: #189ec7;
@@ -827,3 +907,11 @@ footer {
   background-color: rgb(247, 249, 250);
   padding: 40px 0;
 }
+
+
+
+/*레이아웃 먼저, 반응형으로 할지, 고정형으로 할지, 공통레이아웃 잡고 reset css, 
+근본적인 방법으로 접근하여 기능을 고려해서 화면 짜기
+시멘틱태그의 의미 파악하여 사용하기 , 헤더의 링크는 a 태그 , 베스트의 칩들은 버튼 혹은 a태그
+before/after 사용해보기
+일관성 있게!*/

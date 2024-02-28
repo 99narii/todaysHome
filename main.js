@@ -1,9 +1,9 @@
 //메인배너 슬라이드
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.banner-slider');
-    const indexDisplay = document.querySelector('.slider-index'); // Get the index display element
+    const indexDisplay = document.querySelector('.slider-index'); 
     const totalSlides = slider.children.length;
-    let currentIndex = 1; // Start with the first image
+    let currentIndex = 1;
     let isSliding = false;
   
     function updateIndexDisplay() {
@@ -15,21 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
         isSliding = true;
         slider.style.transform = 'translateX(-100%)';
       }
-    }, 3000); // Adjust time for each slide
+    }, 3000);
   
     slider.addEventListener('transitionend', () => {
       slider.style.transition = 'none';
       slider.style.transform = 'translateX(0)';
-      slider.appendChild(slider.firstElementChild); // Move the first image to the end
-      slider.offsetHeight; // Force reflow
+      slider.appendChild(slider.firstElementChild);
+      slider.offsetHeight;
       slider.style.transition = 'transform 0.5s ease-out';
       isSliding = false;
-      // Update the index
       currentIndex = (currentIndex % totalSlides) + 1;
       updateIndexDisplay();
     });
   
-    updateIndexDisplay(); // Initial display update
+    updateIndexDisplay(); 
   });
   
 
