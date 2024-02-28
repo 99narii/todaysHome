@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,21 +16,22 @@
 </head>
 <body>
     <header class="header">
+      
+
         <!-- 네비게이션 상단 ------------------------------------------------------->
         <div class="header-upper">
           <div class="inner">
+            <div class="header-mobile">
+              <button id="modal-open" >=</button>
+              <div class="header-upper_logo"><a href="">오늘의집</a></div>
+              <i class="fas fa-search"></i>
+            </div>
             <div class="header-upper_inner">
               <div class="header-upper_logo"><a href="">오늘의집</a></div>
               <div class="header-upper_nav">
-                <ul>
-                  <li class="header-upper__item">
-                    <a href="">커뮤니티</a>
-                  </li>
-                  <li class="header-upper__item"><a href="">스토어</a></li>
-                  <li class="header-upper__item">
-                    <a href="">인테리어/생활</a>
-                  </li>
-                </ul>
+                <a href="">커뮤니티</a>
+                <a href="">스토어</a>
+                <a href="">인테리어/생활</a>
               </div>
             </div>
             <div class="header-upper_service">
@@ -40,38 +41,88 @@
                 <input type="text" class="search-input" placeholder="통합검색" />
               </span>
               </div>
-              <a href=""><i class="fas fa-shopping-cart"></i></a>
-              <ul>
-                <li><a href="">로그인</a></li>
-                <li><a href="">회원가입</a></li>
-                <li><a href="">고객센터</a></li>
-                <button class="header-upper_writeBtn">
-                  글쓰기
-                  <div class="header-upper_lists">
-                    <a href="">
-                      <p>사진/동영상 올리기</p>
-                      <p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
-                    </a>
-                    <a href="">
-                      <p>집들이 글쓰기</p>
-                      <p>집에 관한 이야기를 글로 작성해 보세요.</p>
-                    </a>
-                    <a href="">
-                      <p>노하우 글쓰기</p>
-                      <p>다양한 인테리어 노하우를 공유해 주세요.</p>
-                    </a>
-                    <a href="">
-                      <p>상품 리뷰 쓰기</p>
-                      <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
-                    </a>
-                    <a href="">
-                      <p>시공 전문가 리뷰쓰기</p>
-                      <p>시공 전문가 리뷰를 작성하고 포인트도 받아보세요.</p>
-                    </a>
-                  </div>
-                </button>
+              <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="">로그인</a>
+                <a href="">회원가입</a>
+                <a href="">고객센터</a>
               </ul>
+              <button class="header-upper_writeBtn">
+                글쓰기
+                <div class="header-upper_lists">
+                  <a href="">
+                    <p>사진/동영상 올리기</p>
+                    <p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
+                  </a>
+                  <a href="">
+                    <p>집들이 글쓰기</p>
+                    <p>집에 관한 이야기를 글로 작성해 보세요.</p>
+                  </a>
+                  <a href="">
+                    <p>노하우 글쓰기</p>
+                    <p>다양한 인테리어 노하우를 공유해 주세요.</p>
+                  </a>
+                  <a href="">
+                    <p>상품 리뷰 쓰기</p>
+                    <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
+                  </a>
+                  <a href="">
+                    <p>시공 전문가 리뷰쓰기</p>
+                    <p>시공 전문가 리뷰를 작성하고 포인트도 받아보세요.</p>
+                  </a>
+                </div>
+              </button>
+
             </div>
+          </div>
+        </div>
+        <!--모바일-->
+        <div id="menus" class="modal__content-wrap">
+          <div class="modal__content-container">
+            <button class="close">X</button>
+            <div class="modal-layout modal__content-tit">
+              <div class="header-upper__logo modal-logo">
+                <a href="">오늘의집</a>
+              </div>
+              <div><a href="">앱다운로드</a></div>
+            </div>
+            <div class="modal-layout modal__content-login">
+              <a href="">
+                <button>로그인</button>
+              </a>
+              <a href="">
+                <button>회원가입</button>
+              </a>
+            </div>
+            <ul class="modal-layout modal__content community">
+              <h4>커뮤니티</h4>
+              <i class="fa-solid fa-angle-down"></i>
+            </ul>
+            <ul class="modal-layout modal__content store">
+              <h4>스토어</h4>
+              <i class="fa-solid fa-angle-down"></i>
+            </ul>
+            <ul class="modal-layout modal__content interior">
+              <h4>인테리어시공</h4>
+              <i class="fa-solid fa-angle-down"></i>
+            </ul>
+            <ul class="modal-layout modal__content">
+              <li><a href="">마이페이지</a></li>
+              <li><a href="">나의 쇼핑</a></li>
+              <li><a href="">스크랩북</a></li>
+              <li><a href="">알림</a></li>
+              <li><a href="">이벤트</a></li>
+              <li><a href="">사진 올리기</a></li>
+              <li><a href="">집들이 글쓰기</a></li>
+              <li><a href="">노하우 글쓰기</a></li>
+              <li><a href="">상품 리뷰 쓰기</a></li>
+              <li><a href="">시공 전문가 리뷰 쓰기</a></li>
+              <li><a href="">인테리어 질문하기</a></li>
+              <li><a href="">고객센터</a></li>
+            </ul>
+            <ul class="modal-layout modal__content">
+              <li href=""><a href="">전문가 신청</a></li>
+              <li href=""><a href="">판매자 신청</a></li>
+            </ul>
           </div>
         </div>
 
@@ -80,23 +131,22 @@
           <div class="header-lower-container">
           <div class="inner">
             <nav>
-              <span class="header-lower__item active" href="">홈</span>
-              <span class="header-lower__item" href="">추천</span>
-              <span class="header-lower__item" href="">#채널</span>
-              <span class="header-lower__item" href="">집들이</span>
-              <span class="header-lower__item" href="">집사진</span>
-              <span class="header-lower__item" href="">살림수납</span>
-              <span class="header-lower__item" href="">콜렉터블</span>
-              <span class="header-lower__item" href="">홈스토랑</span>
-              <span class="header-lower__item" href="">핫플레이스</span>
-              <span class="header-lower__item" href="">육아</span>
-              <span class="header-lower__item" href="">플랜테리어</span>
-              <span class="header-lower__item" href="">반려동물</span>
-              <span class="header-lower__item" href="">캠핑</span>
-              <span class="header-lower__item" href="">취미</span>
-              <span class="header-lower__item" href="">이벤트</span>
+              <a class="header-lower__item active" href="#">홈</a>
+              <a class="header-lower__item" href="#">추천</a>
+              <a class="header-lower__item" href="#">#채널</a>
+              <a class="header-lower__item" href="#">집들이</a>
+              <a class="header-lower__item" href="#">집사진</a>
+              <a class="header-lower__item" href="#">살림수납</a>
+              <a class="header-lower__item" href="#">콜렉터블</a>
+              <a class="header-lower__item" href="#">홈스토랑</a>
+              <a class="header-lower__item" href="#">핫플레이스</a>
+              <a class="header-lower__item" href="#">육아</a>
+              <a class="header-lower__item" href="#">플랜테리어</a>
+              <a class="header-lower__item" href="#">반려동물</a>
+              <a class="header-lower__item" href="#">캠핑</a>
+              <a class="header-lower__item" href="#">취미</a>
+              <a class="header-lower__item" href="#">이벤트</a>
             </nav>
-              
           </div>
           <div class="popular">
             <span class="header-gradient"></span>
@@ -113,12 +163,15 @@
           <div class="home-header">
             <!--메인 배너-->
             <div class="main-banner-l">
-              <div class="main-banner_text">
-                <p class="banner-title">눈이 편한 원목 가구들! 패턴&컬러 믹스매치</p>
-                <span class="banner-profile-info">
-                  <div class="profile-pic"></div>
-                  <p>생각중입니다</p>
-                </span>
+              <div class="banner-img-container">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/project/170653805726572758.jpg?w=850&h=509.79929161747344&c=c" >
+                <div class="main-banner_text">
+                  <p class="banner-title">눈이 편한 원목 가구들! 패턴&컬러 믹스매치</p>
+                  <span class="banner-profile-info">
+                    <div class="profile-pic"></div>
+                    <p>생각중입니다</p>
+                  </span>
+                </div>
               </div>
             </div>
             <div class="main-banner-r">

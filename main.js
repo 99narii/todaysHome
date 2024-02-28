@@ -32,7 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-  
+  document.addEventListener('DOMContentLoaded', function () {
+    // 버튼 요소 선택
+    var modalOpenBtn = document.getElementById('modal-open');
+    
+    // 버튼 클릭 이벤트 리스너 추가
+    modalOpenBtn.addEventListener('click', function() {
+      // div 요소 선택
+      var divModal = document.getElementById('menus');
+      // div의 display 속성을 'block'으로 변경하여 보이게 함
+      divModal.style.display = 'block';
+    });
+  });
+
 //글쓰기 버튼을 누르면 리스트들이 보이기
 
 //하단 헤더에서 더보기를 누르면 리스트로 보이기
