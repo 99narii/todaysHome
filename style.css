@@ -54,12 +54,15 @@ table {
   a,
   button {
     all: unset;
+    cursor: pointer;
   }
   
   .wrap {
     margin: 0 auto;
   }
-  
+  .layout {
+    margin: 0 auto;
+  }
   /* 헤더 상단 영역 -----------------------------------------------------*/
   .header-upper {
     border-bottom: 1px solid #ededed;
@@ -88,7 +91,6 @@ table {
 
   .header-upper-nav {
     color: #424242;
-    cursor: pointer;
 
       a {
         font-size: 18px;
@@ -164,13 +166,14 @@ table {
   }
 
   .header-upper-service a {
-    cursor: pointer;
     padding: 0 10px;
     font-size: 14px;
   }
   .header-upper-service a:nth-child(4) {
     border-left: 1px solid #DADDE0;
   }
+
+
 
   .header-upper-writeBtn {
     width: 92px;
@@ -181,16 +184,47 @@ table {
     border-radius: 5px;
     text-align: center;
     line-height: 22px;
-    cursor: pointer;
     position: relative;
     font-size: 14px;
     font-weight: 700;
   }
-
   .header-upper-writeBtn:hover {
     background: #189ec7;
   }
-
+  .header-upper-lists {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 326px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    top: 120%; /* 버튼 바로 아래 위치 */
+    left: -120%;
+    border-radius: 5px; 
+  }
+  
+  .header-upper-lists a {
+    display: block; 
+    padding: 10px;
+    text-align: left;
+  }
+  .header-upper-lists .write-title {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 21px;
+  }
+  .header-upper-lists .write-sub {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    color: rgb(130, 140, 148);
+  }
+  
+  .header-upper-lists a:hover {
+    background-color: #f0f0f0;
+  }
+  
   .header-mobile {
     display: none;
   }
@@ -251,7 +285,6 @@ table {
   }
   .lower-list {
     color: #424242;
-    cursor: pointer;
     /* margin: 8px 0; */
     padding: 0 12px;
     flex-shrink: 0;
@@ -263,6 +296,7 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
   }
   .header-gradient {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
@@ -272,12 +306,30 @@ table {
   .popular-keyword {
     background-color: #fff;
     padding-left: 10px;
-    display: block;
     width: 200px;
     height: 100%;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
+  .popular-keyword {
+    cursor: pointer; 
+  }
+  
+  .keyword-rank {
+    display: none; 
+    position: absolute; 
+    background-color: white; 
+    height: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+    z-index: 99;
+  }
+  
+  .popular-keyword:hover .keyword-rank {
+    display: block; /* 호버 시 표시 */
+  }
+  
 
   /*메인 바디----------------------------------------------------------*/
   .container {
@@ -443,7 +495,7 @@ table {
     width: 76.5px;
   }
   
-  .container-category p {
+  .container-category ul li a{
     margin-top: 8px;
     font-size: 16px;
     line-height: 20px;
@@ -472,6 +524,7 @@ table {
   .contents-list {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     margin: 0;
     padding: 0;
     justify-content: space-between;
@@ -504,147 +557,162 @@ table {
     margin: 40px auto;
     max-width: 1136px;
 
-      .interior-list {
+    .interior-card {
+      display: flex;
+      position: relative;
+      flex-flow: column;
+      /*카드 크기 설정..?*/
 
-        ul {
-          list-style: none;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
-  
-        }  
+      .img-container {
+        border-radius: 4px;
+        overflow: hidden;
 
-        .interior-card {
-          display: flex;
-          position: relative;
-          flex-flow: column;
-          width: 269px;
-
-          .img-container {
-            width: 269px;
-            height: 179.33px;
-            border-radius: 4px;
-            overflow: hidden;
-
-            img {
-              width: 269px;
-              transition: transform 0.5s ease;
-            }
-          
-            img:hover {
-              transform: scale(1.05);
-            }
-          }
+        img {
+          transition: transform 0.5s ease;
+        }
+      
+        img:hover {
+          transform: scale(1.05);
         }
       }
+    }
+  }
+  
+  .interior-list ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+  }  
+  .interior-card-title {
+    font-size: 16px;
+    line-height: 24px;
   }
 
 /*카테고리별 상품 찾기------------------------------------------------------------*/
 .container-product-category {
-  width: 1136px;
+  position: relative;
+  max-width: 1136px;
+  margin: 0 auto;
+}
 
+.category-list-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
   span {
     font-size: 20px;
   }
 }
-  .category-list{
-    box-sizing: border-box;
-    display: flex;
-    margin: 0 auto;
-    width: 1136px;
-    justify-content: space-between;
-    position: relative;
+.category-list {
+  display: flex;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+  margin: 0 auto;
+  width: 1136px;
+
+}
 
 
-      ul {
-        display: flex;
-        margin: 30px 0 40px;
-        gap: 12px
-      }
-      li {
-        width: 113px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: baseline;
-        align-items: center;
-        width: 75px;
-        height: 98px;
-    
-          img{
-          }
-          p {
-            margin-top: 8px;
-            font-size: 14px;
-            line-height: 18px;
-            color:rgb(47, 52, 56)
-          }
-      }
-      .gradient-sec {
-        background-color: #189ec7;
-        width: 100px;
-        left: 100px;
-        position: fixed;
-        z-index: 9999;
-      }
+.category-list ul {
+  display: flex;
+  margin: 30px 0 40px;
+  gap: 12px
+}
+
+.category-list li {
+  flex: 0 0 auto;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.8em 1em;
+  border-radius: 30px;
+  border: none;
+  box-shadow: rgba(63, 71, 77, 0.15) 0px 2px 5px;
+
+}
+
+.prev-btn {
+  left: 10px;
+
+}
+
+.next-btn {
+  content: "\e96a";
+  right: 10px;
+}
+
+.category-list li img {
+  height: 75px;
+}
+
+.category-list li p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(47, 52, 56);
+}
+
+.category-list .gradient-sec {
+  background-color: #189ec7;
+  width: 100px;
+  left: 100px;
+  position: fixed;
+}
+@media (max-width: 768px) {
+  .category-list li {
+    margin-right: 8px;
   }
+}
+
+@media (max-width: 480px) {
+  .category-list ul {
+    justify-content: center;
+  }
+  
+
+}
 
   /*오늘의 딜*/
 
   .container-deal {
-    margin: 40px auto;
     max-width: 1136px;
-
+    margin: auto;
   }
-  .deal-list {
+  
+  .deal-list ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1136px;
+  }
+  
+  .deal-list li {
     display: flex;
-    position: relative;
-    
-
-    ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-
-    }  
-
-    li{
-      display: flex;
-      position: relative;
-      flex-flow: column;
-      width: 269px;
-
-      .img-container {
-        width: 269px;
-        height: 269px;
-        overflow: hidden;
-        border-radius: 4px;
-
-      }
-      img {
-        width: 269px;
-        height: 269px;
-        transition: transform 0.5s ease; 
-      }
-      img:hover {
-        transform: scale(1.05);
-      }
-        img {
-          border-radius: 4px;
-        }
-        p{
-          font-size: 13px;
-        }
-        .title {
-          font-size: 11px;
-          color: #464646;
-        }
-
-    }
+    flex-direction: column;
   }
+  
+  .container-deal .img-container {
+    max-height: auto;
+    min-height: auto;
+    border-radius: 4px;
+  }
+  
+  .container-deal .img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
 
-      
+  }
   .product-info {
     margin: 4px;
   }
@@ -685,6 +753,49 @@ table {
   }
 
 
+  @media (max-width: 768px) {
+    .deal-list ul {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .deal-list li {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 0;
+      justify-content: space-between;
+    }
+    .deal-list li .img-container {
+      position: relative;
+      width: 50%;      
+    }
+
+    .product-info {
+      width: 50%;
+      margin-left: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .deal-list li .img-container img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+    .deal-list li .img-container::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+      
+    }
+    
+    
+  }
+  
 /*인테리어 리뷰*/
 
 .container-interior-review {
@@ -757,6 +868,14 @@ table {
   flex-flow: column;
   width: 269px;
   overflow: hidden;
+
+  .img-container {
+    width: 269px;
+    height: 179.33px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
 }
 .market-card-title{
   margin-top: 10px;  
@@ -773,12 +892,6 @@ table {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-}
-.img-container {
-  width: 269px;
-  height: 179.33px;
-  overflow: hidden;
-  border-radius: 4px;
 }
 img {
   transition: transform 0.5s ease; 
@@ -812,7 +925,6 @@ img:hover {
   border-radius: 20px;
   font-size: 15px;
   text-decoration: none; 
-  cursor: pointer;
 }
 
 .best-list {
@@ -927,24 +1039,65 @@ footer {
   padding: 40px 0;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1256px) {
   .sc-senter {
     display: none;
   }
-
-
+  .home-page {
+    padding: 0 60px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .home-page {
+    padding: 0 40px;
+  }
   .header-upper-searchBax {
     display: none;
     width: 100%;
   }
+  .container-category ul{
+    padding: 0;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+  .interior-list {
+    padding: 0;
+    width: calc(100% + 32px);
+    
+  }
+  .interior-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .interior-card {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: flex;
+  }
+  /* .img-container {
+    overflow: hidden;
+    position: relative;
+  }
+  .img-container img {
+    width: 100%;
+    height: 352px;
+    object-fit: cover;
+    position: absolute;
+  } */
+  .container-category li span {
+    font-size: 12px;
+  }
+
 
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .home-page {
     padding: 0 20px;
   }
@@ -991,19 +1144,47 @@ footer {
 
   .container-category ul {
     justify-content: space-around; 
-    gap: 20px;
+    gap: 30px;
   }
 
   .container-category li {
     flex-basis: calc(20% - 30px); 
     max-width: calc(20% - 30px); 
-    font-size: 11px;
-      p {
-        font-size: 12px;
-      }
+
+  }
+  .container-category li a {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-category li span {
+    font-size: 12px;
   }
 
-  
+  .interior-list {
+    padding: 0;
+    width: calc(100% + 32px);
+    
+  }
+  .interior-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .interior-card {
+    position: relative;
+    display: flex;
+  }
+  /* .img-container {
+    overflow: hidden;
+    position: relative;
+  }
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  } */
+
 }
 
 
